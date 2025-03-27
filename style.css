@@ -12,15 +12,18 @@ ul, ol {
 
 :root {
     --main-color: #f0978f;
-    --second-color: #0775ab;
+    --second-color: #3067d7;
     --water-color: #003dba;
     --tree-color: green;
+    --build-color: grey;
+    --sand-color: rgb(179, 179, 71);
 }
 
 body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-color: var(--water-color);
 }
 
 header {
@@ -32,6 +35,7 @@ header {
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #1b1b1b;
+    background-color: #fff;
 }
 
 header nav {
@@ -83,18 +87,32 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 230px;
 }
 
-.people img {
-  border-radius: 100%;
+.people .profile-img {
+  border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  height: 200px;
 }
 
-.people nav a img {
+.socials a img {
   border-radius: 0;
   margin: 5px;
   margin-top: 10px;
+}
+
+footer div .socials {
+  margin-bottom: 30px;
+}
+
+.title {
+  background-color: #fff;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .people-name {
@@ -104,9 +122,8 @@ header nav a:hover {
 }
 
 .command_peoples {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   margin: 10px;
   color: white;
 }
@@ -114,7 +131,7 @@ header nav a:hover {
 .command {
   background-color: var(--water-color);
   margin-bottom: -10px;
-  padding-top: 40px; 
+  padding-top: 80px; 
 }
 
 .command h2 {
@@ -135,15 +152,18 @@ footer {
   background-color: var(--water-color);
 }
 footer div {
-  background-color: var(--col-deepblue);
-  margin: -5px 0px 0px 0px;
-  padding:0px;
+  background-color: var(--second-color);
+  margin-top: -4px;
+  padding-bottom: 20px;
   color: #fff;
   text-align:center;
+  
 }
-svg {
+.title-text {
   width:100%;
   overflow:visible;
+  padding: 0;
+  margin: 0;
 }
   
 .wave {
@@ -153,7 +173,6 @@ svg {
 }
 .drop {
   fill: var(--second-color);
-  /* xfill: green; */
   animation: drop 3.2s linear infinite normal;
   stroke: var(--second-color);
   stroke-width:0.5;
@@ -180,9 +199,7 @@ svg {
   animation-delay: -2.1s;
   animation-duration:3.2s;
 }
-.gooeff {
-    filter: url(#goo);
-}
+
 #wave2 {
   animation-duration:5s;
   animation-direction: reverse;
@@ -216,7 +233,7 @@ svg {
 .section-center{
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 60vh;
   display: block;
   z-index: 6;
   margin: 0 auto;
@@ -225,11 +242,12 @@ svg {
 .section-up{
   position: absolute;
   width: 100%;
-  height: 270px;
+  height: 110px;
   left: 0;
   top: 0;
   display: block;
   z-index: 5;
+  background-color: #fff;
 }
 .hill{
   position: absolute;
@@ -259,7 +277,7 @@ svg {
   position: absolute;
   width: 60px;
   height: 60px;
-  background-color: #fff;
+  background-color: var(--sand-color);
   left: 4px;
   top: 0;
   display: block;
@@ -291,6 +309,7 @@ svg {
   left: auto;
   top: 11px;
   right: 5px;
+  background-color: var(--sand-color);
   border-color: #030308 transparent transparent transparent;
 }
 .hill span:nth-child(5){
@@ -389,7 +408,7 @@ svg {
   top: 0;
   border-radius: 50%;
   border: 2px solid #030308;
-  background-color: #fff;
+  background-color: var(--tree-color);
 }
 .left-tree span:nth-child(2){
   width: 2px;
@@ -443,7 +462,7 @@ svg {
   top: 2px;
   border-radius: 50%;
   border: 2px solid #030308;
-  background-color: #fff;
+  background-color: var(--tree-color);
 }
 .right-tree span:nth-child(2){
   width: 2px;
@@ -485,7 +504,7 @@ svg {
   top: -6px;
   border-radius: 50%;
   border: 2px solid #030308;
-  background-color: #fff;
+  background-color: var(--tree-color);
   border-bottom-color:transparent;
 }
 .building-left{
@@ -500,7 +519,7 @@ svg {
   left: 0;
   bottom: 0;
   border: 2px solid #030308;
-  background-color: #fff;
+  background-color: var(--build-color);
   width: 17px;
   height: 42px;
 }
@@ -508,6 +527,7 @@ svg {
   left: 20px;
   width: 30px;
   height: 64px;
+  background-color: var(--build-color);
 }
 .building-left span:nth-child(3){
   left: 23px;
@@ -519,6 +539,7 @@ svg {
   left: 54px;
   width: 20px;
   height: 46px;
+  background-color: var(--build-color);
 }
 .building-left span:nth-child(5){
   left: 56px;
@@ -586,7 +607,7 @@ svg {
   right: 18px;
   bottom: 0;
   border: 2px solid #030308;
-  background-color: #fff;
+  background-color: var(--build-color);
   width: 86px;
   height: 24px;
 }
@@ -719,12 +740,14 @@ svg {
   bottom: 17px;
   width: 9px;
   height: 11px;
+  background-color: yellow;
 }
 .building-right span:nth-child(15){
   right: 43px;
   bottom: 35px;
   width: 9px;
   height: 11px;
+  background-color: yellow;
 }
 .building-right span:nth-child(16){
   right: 43px;
@@ -733,6 +756,7 @@ svg {
   height: 13px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  background-color: yellow;
 }
 .bird-wrapper {
   position: absolute;
@@ -832,7 +856,7 @@ svg {
   width: 100%;
   height: 180px;
   left: 0;
-  top: 270px;
+  top: 110px;
   display: block;
   z-index: 6;
   border-top: 2px solid #030308;
@@ -1587,7 +1611,7 @@ svg {
   border: 3px solid #030308;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 20px;
-  background-color: #fff;
+  background-color: var(--sand-color);
   z-index: 1;
 }
 .ship span:nth-child(2){
@@ -1621,7 +1645,7 @@ svg {
   border: none;
   border-radius: 0;
   background-color: transparent;
-    border-bottom: 62px solid #fff;
+    border-bottom: 62px solid var(--main-color);
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
   transform: rotate(-17.5deg) scale(0.85);
@@ -1649,7 +1673,7 @@ svg {
   border: none;
   border-radius: 0;
   background-color: transparent;
-    border-bottom: 48px solid #fff;
+    border-bottom: 48px solid var(--main-color);
     border-left: 31px solid transparent;
     border-right: 0 solid transparent;
   border-bottom-left-radius: 3px;
@@ -1657,39 +1681,16 @@ svg {
   z-index: 2;
 }
 
-.loader{
-	position: absolute;
-	top: 25%;
-	left: 50%;
-	-webkit-transform: translate(-50%,-50%);
-	   -moz-transform: translate(-50%,-50%);
-	    -ms-transform: translate(-50%,-50%);
-	     -o-transform: translate(-50%,-50%);
-	        transform: translate(-50%,-50%);
-}
-
-.loader h1{
-	margin: 0;
-	padding: 0;
-	text-transform: uppercase;
-	font-size: 2.5em;
-	color: rgba(0,0, 0,.3);
-	background-image: url(https://image.ibb.co/ciSeac/image.png);
-	background-repeat: repeat-x;
-	-webkit-background-clip: text;
-	animation: animate 15s linear infinite;
-
-}
 
 @keyframes animate{
 	0%{
-		background-position: left 0px top 80px;
+		background-position: left 0px top 10px;
 	}
 	40%{
-		background-position: left 800px top -50px;
+		background-position: left 600px top -60px;
 	}
 	80%{
-		background-position: left 1800px top -50px;
+		background-position: left 1800px top -70px;
 	}
 	100%{
 		background-position: left 2400px top 80px;
@@ -1700,4 +1701,66 @@ svg {
   .building-left, .hill, .left-tree {
     display: none;
   }
+}
+
+section.section-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.container {
+  display: flex;
+/*   border:1px solid red; */
+  height: 100%;
+  align-items: center;
+}
+
+.title-animation {
+    display: block;
+    font: 5.5em 'Roboto';
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: var(--second-color);
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: var(--water-color);
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: var(--main-color);
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: var(--main-color);
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: var(--water-color);
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
 }
