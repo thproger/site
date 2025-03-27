@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 * {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Hachi Maru Pop", cursive;
+  font-size: 4.5em;
+}
+
+h2 {
+  
+  font-family: "Hachi Maru Pop", cursive;
 }
 
 ul, ol {
@@ -16,14 +26,17 @@ ul, ol {
     --water-color: #003dba;
     --tree-color: green;
     --build-color: grey;
-    --sand-color: rgb(179, 179, 71);
+    --sand-color: #c2b280;
 }
 
 body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: var(--water-color);
+}
+
+main {
+  background-color: var(--water-color);
 }
 
 header {
@@ -67,7 +80,7 @@ header nav a:hover {
   border-radius: 5px;
 }
 
-.post h2 {
+.post h3 {
   text-align: center;
   color: white;
   margin-bottom: 10px;
@@ -95,6 +108,10 @@ header nav a:hover {
   margin-top: 10px;
   margin-bottom: 10px;
   height: 200px;
+}
+
+.socials {
+  padding-top: 10px;
 }
 
 .socials a img {
@@ -126,6 +143,8 @@ footer div .socials {
   flex-wrap: wrap;
   margin: 10px;
   color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .command {
@@ -757,98 +776,6 @@ footer div {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   background-color: yellow;
-}
-.bird-wrapper {
-  position: absolute;
-  left: 166px;
-  bottom: 46px;
-  display: block;
-  z-index: 8;
-  animation: birdFly 3.5s ease infinite;
-  animation-delay: 0.4s;
-}
-.bird-wrapper.snd {
-  left: 340px;
-  bottom: 65px;
-  animation-delay: 0s;
-}
-.bird-wrapper.trd {
-  left: 420px;
-  bottom: 132px;
-  animation-delay: 1s;
-}
-@keyframes birdFly {
-  0%{ 
-    transform: translateY(0);  
-  }
-  50% { 
-    transform: translateY(-40px); 
-  }
-  100% { 
-    transform: translateY(0); 
-  }
-}
-.left-wing {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 14px;
-  height: 14px;
-  transform-origin: right bottom;
-  animation: wingLeft 0.4s ease infinite;
-}
-.left-wing span {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  border: 2px solid #030308;
-  border-radius: 50%;
-  width: 14px;
-  height: 14px;
-  border-color: #030308 transparent transparent transparent;
-  transform: translate(4px, 12px);
-}
-@keyframes wingLeft {
-  0%{ 
-    transform: rotate(0);  
-  }
-  50% { 
-    transform: rotate(40deg); 
-  }
-  100% { 
-    transform: rotate(0); 
-  }
-}
-.right-wing {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 14px;
-  height: 14px;
-  transform-origin: left bottom;
-  animation: wingRight 0.4s ease infinite;
-}
-.right-wing span {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  border: 2px solid #030308;
-  border-radius: 50%;
-  width: 14px;
-  height: 14px;
-  border-color: #030308 transparent transparent transparent;
-  transform: translate(-4px, 12px);
-}
-@keyframes wingRight {
-  0%{ 
-    transform: rotate(0);  
-  }
-  50% { 
-    transform: rotate(-40deg); 
-  }
-  100% { 
-    transform: rotate(0); 
-  }
 }
 
 .section-down{
@@ -1611,7 +1538,7 @@ footer div {
   border: 3px solid #030308;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 20px;
-  background-color: var(--sand-color);
+  background-color: #7a6935;
   z-index: 1;
 }
 .ship span:nth-child(2){
@@ -1698,7 +1625,7 @@ footer div {
 }
 
 @media (max-width: 400px) {
-  .building-left, .hill, .left-tree {
+  .building-left, .left-tree, .del {
     display: none;
   }
 }
@@ -1709,58 +1636,4 @@ section.section-up {
   align-items: center;
   width: 100vw;
   height: 100vh;
-}
-
-
-.container {
-  display: flex;
-/*   border:1px solid red; */
-  height: 100%;
-  align-items: center;
-}
-
-.title-animation {
-    display: block;
-    font: 5.5em 'Roboto';
-    width: 100%;
-    height: 400px;
-    margin-bottom: 50px;
-}
-
-.text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
-}
-
-.text-copy:nth-child(1){
-  stroke: var(--second-color);
-  animation-delay: -1;
-}
-
-.text-copy:nth-child(2){
-  stroke: var(--water-color);
-  animation-delay: -2s;
-}
-
-.text-copy:nth-child(3){
-  stroke: var(--main-color);
-  animation-delay: -3s;
-}
-
-.text-copy:nth-child(4){
-  stroke: var(--main-color);
-  animation-delay: -4s;
-}
-
-.text-copy:nth-child(5){
-  stroke: var(--water-color);
-  animation-delay: -5s;
-}
-
-@keyframes stroke-offset{
-  100% {stroke-dashoffset: -35%;}
 }
