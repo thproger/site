@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -13,9 +15,9 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  
-  font-family: "Hachi Maru Pop", cursive;
+h2, h3 {
+  font-family: "Pangolin", cursive;
+  letter-spacing: 0.1em;
 }
 
 ul, ol {
@@ -24,8 +26,8 @@ ul, ol {
 
 :root {
     --main-color: #f0978f;
-    --second-color: #306ce6;
-    --water-color: #004ef0;
+    --second-color: #3073cd;
+    --water-color: #006994 ;
     --tree-color: green;
     --build-color: grey;
     --sand-color: #c2b280;
