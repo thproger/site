@@ -9,6 +9,8 @@
 h1 {
   font-family: "Hachi Maru Pop", cursive;
   font-size: 4.5em;
+  letter-spacing: -15px;
+  text-align: center;
 }
 
 h2 {
@@ -22,8 +24,8 @@ ul, ol {
 
 :root {
     --main-color: #f0978f;
-    --second-color: #3067d7;
-    --water-color: #003dba;
+    --second-color: #306ce6;
+    --water-color: #004ef0;
     --tree-color: green;
     --build-color: grey;
     --sand-color: #c2b280;
@@ -126,7 +128,7 @@ footer div .socials {
 
 .title {
   background-color: #fff;
-  height: 30vh;
+  height: 33vh;
   display: flex;
   justify-content: center;
   align-items: center;
